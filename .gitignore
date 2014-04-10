@@ -16,7 +16,7 @@
 /tmp
 
 # Ingore Gemfile.lock
-/.Gemfile.lock
+.Gemfile.lock
 
 # Ingore .idea
-/.idea
+.idea

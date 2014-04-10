@@ -14,3 +14,9 @@
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
+
+# Ingore Gemfile.lock
+/.Gemfile.lock
+
+# Ingore .idea
+/.idea

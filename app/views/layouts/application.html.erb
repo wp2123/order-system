@@ -7,8 +7,18 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-    <div class="wrap">
+  <div id="wrap">
+    <div class="navbar navbar-default navbar-static-top"></div>
+    <div class="container">
       <%= yield %>
     </div>
+    <footer class="footer">
+      <ul class="breadcrumb">
+        <li>
+          <span class="gray">美食街外卖订餐系统</span>
+        </li>
+      </ul>
+    </footer>
+  </div>
 </body>
 </html>

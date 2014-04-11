@@ -1,0 +1,21 @@
+.footer {
+  position: absolute;
+  bottom: 0;
+  display: block;
+  text-align: center;
+  width: 100%;
+  border-top: 1px solid lightgray;
+
+  margin-bottom: -237px;
+  display: block;
+
+  .breadcrumb {
+    padding: 4px;
+    margin: 0px;
+    background-color: white;
+  }
+}
+
+.gray {
+  color: gray;
+}

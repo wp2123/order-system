@@ -1,0 +1,37 @@
+<h2>所有用户</h2>
+<%= link_to "新建用户", new_user_path %>
+<table class="table">
+  <tr>
+    <th>用户名</th>
+    <th>姓名</th>
+    <th>邮箱</th>
+    <th>电话</th>
+  </tr>
+  <tr>
+    <% @users.each do |user| %>
+      <tr><%= user.username %></tr>
+      <tr><%= user.name %></tr>
+      <tr><%= user.email %></tr>
+      <tr><%= user.phone %></tr>
+    <% end %>
+  </tr>
+</table>
+
+<h2>所有客户</h2>
+<%= link_to '新建客户', new_customer_path %>
+<table class="table">
+  <tr>
+    <th>用户名</th>
+    <th>姓名</th>
+    <th>邮箱</th>
+    <th>电话</th>
+  </tr>
+  <tr>
+    <% @customers.each do |customer| %>
+    <tr><%= customer.username %></tr>
+    <tr><%= customer.name %></tr>
+    <tr><%= customer.email %></tr>
+    <tr><%= customer.phone %></tr>
+  <% end %>
+  </tr>
+</table>

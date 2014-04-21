@@ -10,7 +10,6 @@ module SessionHelper
 
   def sign_out
     session[:user_id] = nil
-    #session[:current_user] = nil
   end
 
   def current_user
@@ -26,7 +25,7 @@ module SessionHelper
   end
 
   def is_admin?
-    signed_in? && current_user.admin
+    signed_in? && current_user.admin?
   end
 
   def deny_access

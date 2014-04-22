@@ -8,6 +8,7 @@ OrderSystem::Application.routes.draw do
   get '/admin', to: 'user#admin_page', as: 'admin'
 
   get '/user', to: 'user#new_user', as: 'new_user'
+  post 'user', to: 'user#create_user'
   get '/customer', to: 'user#new_customer', as: 'new_customer'
 
 end

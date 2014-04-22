@@ -1,4 +1,4 @@
-<%= form_for @user, url: { action: 'new_user' } do |f| %>
+<%= form_for @user, url: { action: 'create_user' } do |f| %>
   <% if !@user.errors.blank? %>
     <div>
       <h2>保存失败，请修改一下错误后继续：</h2>
@@ -27,7 +27,7 @@
     <%= f.email_field :email %>
   </div>
   <div class="field">
-    <%= f.label :password, '姓名' %>
+    <%= f.label :password, '密码' %>
     <%= f.text_field :password, value: @user.password %>
   </div>
   <div>

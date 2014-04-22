@@ -7,14 +7,14 @@
     <th>邮箱</th>
     <th>电话</th>
   </tr>
-  <tr>
-    <% @users.each do |user| %>
-      <tr><%= user.username %></tr>
-      <tr><%= user.name %></tr>
-      <tr><%= user.email %></tr>
-      <tr><%= user.phone %></tr>
-    <% end %>
-  </tr>
+  <% @users.each do |user| %>
+    <tr>
+      <th><%= user.username %></th>
+      <th><%= user.name %></th>
+      <th><%= user.email %></th>
+      <th><%= user.phone %></th>
+    </tr>
+  <% end %>
 </table>
 
 <h2>所有客户</h2>
@@ -26,12 +26,13 @@
     <th>邮箱</th>
     <th>电话</th>
   </tr>
-  <tr>
-    <% @customers.each do |customer| %>
-    <tr><%= customer.username %></tr>
-    <tr><%= customer.name %></tr>
-    <tr><%= customer.email %></tr>
-    <tr><%= customer.phone %></tr>
+  <% @customers.each do |customer| %>
+    <tr>
+      <th><%= customer.username %></th>
+      <th><%= customer.name %></th>
+      <th><%= customer.email %></th>
+      <th><%= customer.phone %></th>
+    </tr>
   <% end %>
-  </tr>
+
 </table>

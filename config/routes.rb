@@ -10,5 +10,6 @@ OrderSystem::Application.routes.draw do
   get '/user', to: 'user#new_user', as: 'new_user'
   post 'user', to: 'user#create_user'
   get '/customer', to: 'user#new_customer', as: 'new_customer'
+  post '/customer', to: 'user#create_customer'
 
 end

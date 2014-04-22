@@ -28,7 +28,7 @@
   </div>
   <div class="field">
     <%= f.label :password, '密码' %>
-    <%= f.text_field :password, value: @user.password %>
+    <%= f.password_field :password, value: @user.password %>
   </div>
   <div>
     <%= f.submit '保存', class: 'btn btn-primary' %>

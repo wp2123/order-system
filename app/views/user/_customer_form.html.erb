@@ -30,6 +30,10 @@
     <%= f.label :password, '姓名' %>
     <%= f.text_field :password, value: @customer.password %>
   </div>
+  <div class="field">
+    <%= f.label :belongs_to, '所属公司名称' %>
+    <%= f.collection_select :id, User.where(role: 'user'), :id, :username %>
+  </div>
   <div>
     <%= f.submit '保存', class: 'btn btn-primary' %>
   </div>

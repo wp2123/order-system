@@ -13,6 +13,7 @@ OrderSystem::Application.routes.draw do
     get '/', to: 'user#new_user', as: 'new_user'
     post '/', to: 'user#create_user'
     get '/customers', to: 'user#show_customers'
+    post '/customer', to: 'user#user_create_customer'
   end
 
   scope '/customer' do

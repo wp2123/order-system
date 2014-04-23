@@ -1,4 +1,6 @@
 class UserController < ApplicationController
+  skip_before_filter :verify_authenticity_token, only: [:user_create_customer]
+
   def admin_page
     @users = User.where(role: 'user')
     @customers = User.where(role: 'customer')
@@ -38,6 +40,12 @@ class UserController < ApplicationController
     @my_customers = User.where(company_id: current_user_id, role: 'customer')
   end
 
+  def user_create_customer
+    customer = User.create(user_create_customer_params)
+    customer.update(role: 'customer', company_id: params[:user_id])
+    render text: 'ok', status: 200
+  end
+
   def customer_index
 
   end
@@ -50,6 +58,10 @@ class UserController < ApplicationController
 
   def customer_params
     params.require(:user).permit(:username, :name, :phone, :email, :password, :company_id)
+  end
+
+  def user_create_customer_params
+    params.require(:customer_info).permit(:username, :name, :phone, :email, :password)
   end
 
 end

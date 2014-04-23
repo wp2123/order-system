@@ -11,7 +11,7 @@
         </ul>
       </div>
       <div class="btn-group btn-group-0">
-        <button type="button" class="btn btn-default btn-default-alt">
+        <button type="button" class="btn btn-default btn-default-alt" data-toggle="modal" data-target="#add_new_customer">
           <i class="icon-wrench"></i> 新建用户
         </button>
       </div>
@@ -41,7 +41,7 @@
               <tbody>
                 <% @my_customers.each do |my_customer| %>
                   <tr>
-                    <td><input type="checkbox"></td>
+                    <td><input type="checkbox" customer_id=<%= my_customer.id %></td>
                     <td>
                       <a data-target="#edit_customer_info-1" data-toggle="modal" href="#">
                         <%= my_customer.name %>
@@ -75,5 +75,64 @@
       <li><a href="#">5</a></li>
       <li><a href="#">»</a></li>
     </ul>
+  </div>
+</div>
+
+<div id="add_new_customer" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button class="close" type="button" data-dismiss="modal" aria-hidden="true">&times</button>
+        <h4 class="modal-title">新建用户</h4>
+      </div>
+      <div class="modal-body">
+        <form class="form-horizontal" role="form">
+          <div class="form-group customer-edit">
+            <label class="col-sm-2 control-label">用户名 :</label>
+            <div class="col-sm-10">
+              <div class="col-sm-4">
+                <input class="new_customer_info form-control" type="text">
+              </div>
+            </div>
+          </div>
+          <div class="form-group customer-edit">
+            <label class="col-sm-2 control-label">姓名 :</label>
+            <div class="col-sm-10">
+              <div class="col-sm-4">
+                <input class="new_customer_info form-control" type="text">
+              </div>
+            </div>
+          </div>
+          <div class="form-group customer-edit">
+            <label class="col-sm-2 control-label">手机 :</label>
+            <div class="col-sm-10">
+              <div class="col-sm-4">
+                <input class="new_customer_info form-control" type="text">
+              </div>
+            </div>
+          </div>
+          <div class="form-group customer-edit">
+            <label class="col-sm-2 control-label">邮箱 :</label>
+            <div class="col-sm-10">
+              <div class="col-sm-4">
+                <input class="new_customer_info form-control" type="text">
+              </div>
+            </div>
+          </div>
+          <div class="form-group customer-edit">
+            <label class="col-sm-2 control-label">密码 :</label>
+            <div class="col-sm-10">
+              <div class="col-sm-4">
+                <input class="new_customer_info form-control" type="text">
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <input class="btn btn-primary btn-lg" type="submit" data-dismiss="modal" value="保存" current_user_id=<%= current_user_id %> onclick="new_customer(this)">
+        <input class="btn btn-default btn-lg" type="submit" data-dismiss="modal" value="取消">
+      </div>
+    </div>
   </div>
 </div>

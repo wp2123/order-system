@@ -50,3 +50,12 @@
 .clearfix {
     *zoom: 1;
 }
+
+.title-center {
+    padding-bottom: 30px;
+}
+
+.index-analytics {
+    text-align: center;
+    width: 25%;
+}

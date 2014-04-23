@@ -11,11 +11,15 @@ class User < ActiveRecord::Base
   end
 
   def admin?
-    return role == 'admin' ? true : false
+    role == 'admin' ? true : false
   end
 
   def user?
-    return role == 'user' ? true : false
+    role == 'user' ? true : false
+  end
+
+  def customer?
+    role == 'customer' ? true : false
   end
 
 end

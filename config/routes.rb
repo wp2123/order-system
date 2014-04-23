@@ -6,10 +6,18 @@ OrderSystem::Application.routes.draw do
   post 'session', to: 'session#create'
 
   get '/admin', to: 'user#admin_page', as: 'admin'
+  get 'user/index', to: 'user#user_index', as: 'users'
+  get 'customer/index', to: 'user#customer_index', as: 'customers'
 
-  get '/user', to: 'user#new_user', as: 'new_user'
-  post 'user', to: 'user#create_user'
-  get '/customer', to: 'user#new_customer', as: 'new_customer'
-  post '/customer', to: 'user#create_customer'
+  scope '/user' do
+    get '/', to: 'user#new_user', as: 'new_user'
+    post '/', to: 'user#create_user'
+    get '/customers', to: 'user#show_customers'
+  end
+
+  scope '/customer' do
+    get '/', to: 'user#new_customer', as: 'new_customer'
+    post '/', to: 'user#create_customer'
+  end
 
 end

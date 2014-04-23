@@ -30,6 +30,18 @@ class UserController < ApplicationController
     end
   end
 
+  def user_index
+    @my_customers = User.where(company_id: current_user_id, role: 'customer')
+  end
+
+  def show_customers
+    @my_customers = User.where(company_id: current_user_id, role: 'customer')
+  end
+
+  def customer_index
+
+  end
+
   private
 
   def user_params

@@ -17,6 +17,22 @@
             </li>
           </ul>
         <% end %>
+        <% if is_user? %>
+          <ul class="nav navbar-nav">
+            <li>
+              <a href='/user/index'>首页</a>
+            </li>
+            <li>
+              <a href='/user/customers'>员工管理</a>
+            </li>
+            <li>
+              <a href="">餐厅管理</a>
+            </li>
+            <li>
+              <a href="">餐补管理</a>
+            </li>
+          </ul>
+        <% end %>
         <ul class="nav navbar-nav navbar-right">
           <li class="dropdown">
             <a class="dropdown-toggle" data-toggle="dropdown" href="#">

@@ -1,0 +1,79 @@
+<br>
+<div class="row action-panel">
+  <div class="col-md-12">
+    <div class="pull-left">
+      <div class="btn-group btn-group-0">
+        <button type="button" class="btn btn-default btn-default-alt dropdown-toggle " data-toggle="dropdown">
+          <i class="icon-wrench"></i> 批量操作 <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu" role="menu">
+          <li><a href="#" data-toggle="modal" data-target="#modal-delete-customer"><i class="icon-remove"></i> 删除</a></li>
+        </ul>
+      </div>
+      <div class="btn-group btn-group-0">
+        <button type="button" class="btn btn-default btn-default-alt">
+          <i class="icon-wrench"></i> 新建用户
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<br>
+<br>
+<div class="row">
+  <div class="col-md-12">
+    <div class="panel panel-default">
+      <div class="action-bar">
+      </div>
+      <div class="user-table">
+        <div class="tab-content">
+          <div class="tab-pane fade in active" id="basic-info">
+            <table class="table table-hover">
+              <thead>
+                <tr>
+                  <th class="checkbox-col"><input type="checkbox"></th>
+                  <th>姓名</th>
+                  <th>手机</th>
+                  <th>邮箱</th>
+                  <th>余额</th>
+                </tr>
+              </thead>
+              <tbody>
+                <% @my_customers.each do |my_customer| %>
+                  <tr>
+                    <td><input type="checkbox"></td>
+                    <td>
+                      <a data-target="#edit_customer_info-1" data-toggle="modal" href="#">
+                        <%= my_customer.name %>
+                      </a>
+                    </td>
+                    <td>
+                      <%= my_customer.phone %>
+                    </td>
+                    <td>
+                      <%= my_customer.email %>
+                    </td>
+                    <td>0元</td>
+                  </tr>
+                <% end %>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <ul class="pagination pull-right">
+      <li class="disabled"><a href="#">«</a></li>
+      <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
+      <li><a href="#">2</a></li>
+      <li><a href="#">3</a></li>
+      <li><a href="#">4</a></li>
+      <li><a href="#">5</a></li>
+      <li><a href="#">»</a></li>
+    </ul>
+  </div>
+</div>

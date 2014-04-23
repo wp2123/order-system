@@ -28,6 +28,10 @@ module SessionHelper
     signed_in? && current_user.admin?
   end
 
+  def is_user?
+    signed_in? && current_user.user?
+  end
+
   def deny_access
     redirect_to '/signin', :notice => "Please sign in to access this page."
   end
